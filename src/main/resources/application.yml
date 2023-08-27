@@ -4,6 +4,15 @@ spring:
   config:
     import: "optional:configserver:http://localhost"
 
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        service-name: my-zuul
+        instance-id: ${spring.cloud.consul.discovery.service-name}-1
+
 zuul:
   routes:
     soap:
