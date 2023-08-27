@@ -16,6 +16,7 @@ spring:
 zuul:
   routes:
     soap:
-      url: http://localhost:8081
+      service-id: ws
+#      url: http://localhost:8081
 
 
